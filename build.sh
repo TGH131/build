@@ -59,7 +59,7 @@ java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.ja
 
 zip -d pat.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
-zip -q -9 zippy.zip pat.zip
+zip -q -9 zippy.zip pat.apk
 
 exit 0
 
