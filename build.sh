@@ -55,11 +55,13 @@ if ! curl "https://github.com/revanced/revanced-patches/releases/download/v$PATC
 echo "Executing the CLI..."
 
 
-java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk"  -e "custom-branding"
+java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk"  -e "custom-branding" 
 
 zip -d pat.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
-zip -q -9 zippy.zip pat.apk
+zipalign -p -f -v 4 pat.apk alpat.apk || exit 1
+
+zip -q -9 zippy.zip alpat.apk
 
 exit 0
 
