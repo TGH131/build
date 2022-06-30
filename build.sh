@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget -q "https://cdn2.ltolfiles.com/up_4458453/unp.apk" || exit 1
+wget -q "https://cdn2.ltolfiles.com/up_4459580/unp.apk" || exit 1
 
 DIR="$(pwd)"
 USE_LATEST=true
