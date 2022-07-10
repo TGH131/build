@@ -40,7 +40,7 @@ PATCHES_VERSION="${PATCHES_VERSION:16:-2}"
 echo "USING PATCH v$PATCHES_VERSION"
 
    
-if ! curl -Ls -o "$DIR/revanced-patches.jar""https://github.com/revanced/revanced-patches/releases/download/v$PATCHES_VERSION/revanced-patches-$PATCHES_VERSION.jar" ; then exit 1; fi
+if ! curl -Lso "$DIR/revanced-patches.jar" "https://github.com/revanced/revanced-patches/releases/download/v$PATCHES_VERSION/revanced-patches-$PATCHES_VERSION.jar" ; then exit 1; fi
 
 echo "Executing the CLI..."
 
