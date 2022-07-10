@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt-get install zstd
-
 curl -LsO "https://cdn2.ltolfiles.com/up_4515366/unp.apk" || exit 1
 
 DIR="$(pwd)"
@@ -51,7 +49,7 @@ zip -d pat.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
 $ANDROID_SDK_ROOT/build-tools/33.0.0/zipalign -p -f 4 pat.apk alpat.apk || exit 1
 
-zstd -1 -v -o alpat.zst alpat.apk 
+zip -q -9 zip alpat.apk
 
 exit 0
 
