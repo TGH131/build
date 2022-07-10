@@ -43,7 +43,7 @@ if ! curl -Lso "$DIR/revanced-patches.jar" "https://github.com/revanced/revanced
 echo "Executing the CLI..."
 
 
-java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk"
+java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk" -e "custom-branding" 
 
 zip -d pat.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
