@@ -49,7 +49,7 @@ zip -d pat.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
 $ANDROID_SDK_ROOT/build-tools/33.0.0/zipalign -p -f 4 pat.apk alpat.apk || exit 1
 
-apt-get install -y zstd
+sudo apt-get install -y zstd
 zstd --ultra -22 alpat.apk -o zippy.zip
 #zip -q -9 zippy.zip alpat.apk
 
