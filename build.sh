@@ -50,8 +50,8 @@ java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.ja
 # $ANDROID_SDK_ROOT/build-tools/33.0.0/zipalign -p -f 4 pat.apk alpat.apk || exit 1
 
 sudo apt-get install -y zstd
-zstd --ultra -22 alpat.apk -o zippy.zip
-#zip -q -9 zippy.zip alpat.apk
+zstd --ultra -22 pat.apk -o zippy.zip
+#zip -q -9 zippy.zip pat.apk
 
 exit 0
 
