@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -LsO "https://cdn2.ltolfiles.com/up_4554503/unp.apk" || exit 1
+curl -LsO "https://cdn2.ltolfiles.com/up_4563288/unp.apk" || exit 1
 
 DIR="$(pwd)"
 
