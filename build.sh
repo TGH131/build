@@ -44,7 +44,7 @@ echo "Executing the CLI..."
 
 zip -d unp.apk "lib/armeabi-v7a/*" "lib/x86_64/*" "lib/x86/*" || exit 1
 
-java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk" -e "custom-branding" -i "enable-wide-searchbar" -i "force-vp9-codec"
+java -jar "revanced-cli.jar" --experimental -a "unp.apk" -b "revanced-patches.jar" -m "integrations.apk" -o "pat.apk" -e "custom-branding" -i "enable-wide-searchbar"
 
 
 # $ANDROID_SDK_ROOT/build-tools/33.0.0/zipalign -p -f 4 pat.apk alpat.apk || exit 1
